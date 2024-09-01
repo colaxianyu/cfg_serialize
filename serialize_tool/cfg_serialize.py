@@ -4,6 +4,7 @@ import pickle
 import os
 import sys
 import networkx as nx
+from typing import List
 from cfg_format import CFGFomat, Node, Edge
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -41,20 +42,34 @@ class CFGSerialization:
         for from_node, to_node in graph.edges():
             self.cfg_.edges_.append(Edge(from_node_id_ = int(from_node), to_node_id_ = int(to_node)))
 
-    def __serialization(self, file_name, serialize_format, save_path = None) -> None:
-        full_save_path = os.path.join(save_path, file_name)
+    def __serialization(self, file_name, serialize_format, save_path = None, is_serialize_graph2vec = False) -> None:
+        if is_serialize_graph2vec:
+            nodes_dir = os.path.join(save_path, 'Nodes_json')
+            edges_dir = os.path.join(save_path, 'Edges_json')
+            os.makedirs(nodes_dir, exist_ok=True)
+            os.makedirs(edges_dir, exist_ok=True)
 
-        try:
-            if serialize_format == 'json':
-                with open(full_save_path, 'w') as f:
-                    json.dump(self.cfg_.to_dict(), f, indent=2)
-            elif serialize_format == 'pkl':
-                with open(full_save_path, 'wb') as f:
-                    pickle.dump(self.cfg_, f)
-        except Exception as e:
-            print(f'Error saving file: {file_name}: {e}')
+            nodes_file = os.path.join(nodes_dir, f"nodes_{file_name}")
+            with open(nodes_file, 'w') as f:
+                json.dump([node.to_dict() for node in self.cfg_.nodes_], f, indent=2)
 
-    def serialize_cfgs(self, input_dir: str, output_dir = None, serialize_format = 'json', delete_dot = False) -> None: 
+            edges_file = os.path.join(edges_dir, f"edges_{file_name}")
+            with open(edges_file, 'w') as f:
+                json.dump({"edges": [edge.to_list() for edge in self.cfg_.edges_]}, f, indent=2)
+
+        else:
+            full_save_path = os.path.join(save_path, file_name)
+            try:
+                if serialize_format == 'json':
+                    with open(full_save_path, 'w') as f:
+                        json.dump(self.cfg_.to_dict(), f, indent=2)
+                elif serialize_format == 'pkl':
+                    with open(full_save_path, 'wb') as f:
+                        pickle.dump(self.cfg_, f)
+            except Exception as e:
+                print(f'Error saving file: {file_name}: {e}')
+
+    def serialize_cfgs(self, input_dir: str, output_dir = None, serialize_format = 'json', delete_dot = False, is_serialize_graph2vec = False) -> None: 
         if output_dir is None:
             output_dir = os.path.join(os.getcwd(), 'results')
         
@@ -75,8 +90,12 @@ class CFGSerialization:
                     self.dot_graphs_ = pydot.graph_from_dot_file(dot_file_path)
                     self.__parse_graph()
                     serialize_file_name = file_name.replace('.dot', f'.{serialize_format}')
-                    self.__serialization(serialize_file_name, serialize_format, result_dir)
+                    self.__serialization(serialize_file_name, serialize_format, result_dir, is_serialize_graph2vec)
 
             if delete_dot:
                 import shutil
                 shutil.rmtree(dot_dir)
+
+dir = "D:/MyFile/Download/evm_cfg_builder/test1"
+c = CFGSerialization()
+c.serialize_cfgs(dir, is_serialize_graph2vec=True)
