@@ -16,7 +16,8 @@ class CFGUnserialize:
         try:
            with open(file_path, 'r') as f:
                data = json.load(f)
-               self.cfg_ = data
+               self.cfg_.edges_ = data['cfg']['edges']
+               self.cfg_.nodes_ = data['cfg']['nodes']
         except json.JSONDecodeError as e:
             print(f"Error decoding JSON from file {file_path}: {str(e)}")
     
