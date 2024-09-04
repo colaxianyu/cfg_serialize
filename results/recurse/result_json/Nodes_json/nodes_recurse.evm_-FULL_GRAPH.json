@@ -1,0 +1,250 @@
+[
+  {
+    "id": 94,
+    "asmcode": [
+      "JUMPDEST",
+      "POP",
+      "PUSH1 0x65",
+      "PUSH1 0xa3",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 83,
+    "asmcode": [
+      "JUMPDEST",
+      "CALLVALUE",
+      "DUP1",
+      "ISZERO",
+      "PUSH1 0x5e",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 123,
+    "asmcode": [
+      "JUMPDEST",
+      "CALLVALUE",
+      "DUP1",
+      "ISZERO",
+      "PUSH1 0x86",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 73,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0xc27fc305",
+      "EQ",
+      "PUSH1 0x8f",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 12,
+    "asmcode": [
+      "PUSH1 0x0",
+      "CALLDATALOAD",
+      "PUSH29 0x100000000000000000000000000000000000000000000000000000000",
+      "SWAP1",
+      "DIV",
+      "PUSH4 0xffffffff",
+      "AND",
+      "DUP1",
+      "PUSH4 0x9942ec6f",
+      "EQ",
+      "PUSH1 0x67",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 163,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0xa9",
+      "PUSH1 0xb1",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 141,
+    "asmcode": [
+      "JUMPDEST",
+      "STOP"
+    ]
+  },
+  {
+    "id": 63,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0xa5850475",
+      "EQ",
+      "PUSH1 0x7b",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 187,
+    "asmcode": [
+      "STOP"
+    ]
+  },
+  {
+    "id": 130,
+    "asmcode": [
+      "PUSH1 0x0",
+      "DUP1",
+      "REVERT"
+    ]
+  },
+  {
+    "id": 161,
+    "asmcode": [
+      "JUMPDEST",
+      "STOP"
+    ]
+  },
+  {
+    "id": 134,
+    "asmcode": [
+      "JUMPDEST",
+      "POP",
+      "PUSH1 0x8d",
+      "PUSH1 0xb1",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 150,
+    "asmcode": [
+      "PUSH1 0x0",
+      "DUP1",
+      "REVERT"
+    ]
+  },
+  {
+    "id": 114,
+    "asmcode": [
+      "JUMPDEST",
+      "POP",
+      "PUSH1 0x79",
+      "PUSH1 0xa3",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 103,
+    "asmcode": [
+      "JUMPDEST",
+      "CALLVALUE",
+      "DUP1",
+      "ISZERO",
+      "PUSH1 0x72",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 185,
+    "asmcode": [
+      "JUMPDEST",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 175,
+    "asmcode": [
+      "JUMPDEST",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 169,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0xaf",
+      "PUSH1 0xb3",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 110,
+    "asmcode": [
+      "PUSH1 0x0",
+      "DUP1",
+      "REVERT"
+    ]
+  },
+  {
+    "id": 154,
+    "asmcode": [
+      "JUMPDEST",
+      "POP",
+      "PUSH1 0xa1",
+      "PUSH1 0xb3",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 177,
+    "asmcode": [
+      "JUMPDEST",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 143,
+    "asmcode": [
+      "JUMPDEST",
+      "CALLVALUE",
+      "DUP1",
+      "ISZERO",
+      "PUSH1 0x9a",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 121,
+    "asmcode": [
+      "JUMPDEST",
+      "STOP"
+    ]
+  },
+  {
+    "id": 0,
+    "asmcode": [
+      "PUSH1 0x80",
+      "PUSH1 0x40",
+      "MSTORE",
+      "PUSH1 0x4",
+      "CALLDATASIZE",
+      "LT",
+      "PUSH1 0x53",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 179,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0xb9",
+      "PUSH1 0xb1",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 101,
+    "asmcode": [
+      "JUMPDEST",
+      "STOP"
+    ]
+  },
+  {
+    "id": 90,
+    "asmcode": [
+      "PUSH1 0x0",
+      "DUP1",
+      "REVERT"
+    ]
+  }
+]

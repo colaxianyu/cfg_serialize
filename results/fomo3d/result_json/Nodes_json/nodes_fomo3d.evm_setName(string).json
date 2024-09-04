@@ -1,0 +1,381 @@
+[
+  {
+    "id": 1842,
+    "asmcode": [
+      "JUMPDEST",
+      "CALLVALUE",
+      "DUP1",
+      "ISZERO",
+      "PUSH2 0x73e",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 1850,
+    "asmcode": [
+      "PUSH1 0x0",
+      "DUP1",
+      "REVERT"
+    ]
+  },
+  {
+    "id": 1854,
+    "asmcode": [
+      "JUMPDEST",
+      "POP",
+      "PUSH2 0x799",
+      "PUSH1 0x4",
+      "DUP1",
+      "CALLDATASIZE",
+      "SUB",
+      "DUP2",
+      "ADD",
+      "SWAP1",
+      "DUP1",
+      "DUP1",
+      "CALLDATALOAD",
+      "SWAP1",
+      "PUSH1 0x20",
+      "ADD",
+      "SWAP1",
+      "DUP3",
+      "ADD",
+      "DUP1",
+      "CALLDATALOAD",
+      "SWAP1",
+      "PUSH1 0x20",
+      "ADD",
+      "SWAP1",
+      "DUP1",
+      "DUP1",
+      "PUSH1 0x1f",
+      "ADD",
+      "PUSH1 0x20",
+      "DUP1",
+      "SWAP2",
+      "DIV",
+      "MUL",
+      "PUSH1 0x20",
+      "ADD",
+      "PUSH1 0x40",
+      "MLOAD",
+      "SWAP1",
+      "DUP2",
+      "ADD",
+      "PUSH1 0x40",
+      "MSTORE",
+      "DUP1",
+      "SWAP4",
+      "SWAP3",
+      "SWAP2",
+      "SWAP1",
+      "DUP2",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "DUP4",
+      "DUP4",
+      "DUP1",
+      "DUP3",
+      "DUP5",
+      "CALLDATACOPY",
+      "DUP3",
+      "ADD",
+      "SWAP2",
+      "POP",
+      "POP",
+      "POP",
+      "POP",
+      "POP",
+      "POP",
+      "SWAP2",
+      "SWAP3",
+      "SWAP2",
+      "SWAP3",
+      "SWAP1",
+      "POP",
+      "POP",
+      "POP",
+      "PUSH2 0x1d04",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 7428,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0x0",
+      "CALLER",
+      "SWAP1",
+      "POP",
+      "PUSH1 0xa",
+      "PUSH1 0x0",
+      "DUP3",
+      "PUSH1 0x40",
+      "MLOAD",
+      "DUP1",
+      "DUP3",
+      "PUSH20 0xffffffffffffffffffffffffffffffffffffffff",
+      "AND",
+      "PUSH20 0xffffffffffffffffffffffffffffffffffffffff",
+      "AND",
+      "PUSH13 0x1000000000000000000000000",
+      "MUL",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x14",
+      "ADD",
+      "SWAP2",
+      "POP",
+      "POP",
+      "PUSH1 0x40",
+      "MLOAD",
+      "DUP1",
+      "SWAP2",
+      "SUB",
+      "SWAP1",
+      "SHA3",
+      "PUSH1 0x0",
+      "NOT",
+      "AND",
+      "PUSH1 0x0",
+      "NOT",
+      "AND",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "SWAP1",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "PUSH1 0x0",
+      "SHA3",
+      "PUSH1 0x0",
+      "SWAP1",
+      "SLOAD",
+      "SWAP1",
+      "PUSH2 0x100",
+      "EXP",
+      "SWAP1",
+      "DIV",
+      "PUSH1 0xff",
+      "AND",
+      "ISZERO",
+      "ISZERO",
+      "PUSH2 0x1d8d",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 7561,
+    "asmcode": [
+      "PUSH1 0x0",
+      "DUP1",
+      "REVERT"
+    ]
+  },
+  {
+    "id": 7565,
+    "asmcode": [
+      "JUMPDEST",
+      "DUP2",
+      "PUSH1 0x0",
+      "SWAP1",
+      "DUP1",
+      "MLOAD",
+      "SWAP1",
+      "PUSH1 0x20",
+      "ADD",
+      "SWAP1",
+      "PUSH2 0x1da3",
+      "SWAP3",
+      "SWAP2",
+      "SWAP1",
+      "PUSH2 0x2398",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 9112,
+    "asmcode": [
+      "JUMPDEST",
+      "DUP3",
+      "DUP1",
+      "SLOAD",
+      "PUSH1 0x1",
+      "DUP2",
+      "PUSH1 0x1",
+      "AND",
+      "ISZERO",
+      "PUSH2 0x100",
+      "MUL",
+      "SUB",
+      "AND",
+      "PUSH1 0x2",
+      "SWAP1",
+      "DIV",
+      "SWAP1",
+      "PUSH1 0x0",
+      "MSTORE",
+      "PUSH1 0x20",
+      "PUSH1 0x0",
+      "SHA3",
+      "SWAP1",
+      "PUSH1 0x1f",
+      "ADD",
+      "PUSH1 0x20",
+      "SWAP1",
+      "DIV",
+      "DUP2",
+      "ADD",
+      "SWAP3",
+      "DUP3",
+      "PUSH1 0x1f",
+      "LT",
+      "PUSH2 0x23d9",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 9161,
+    "asmcode": [
+      "DUP1",
+      "MLOAD",
+      "PUSH1 0xff",
+      "NOT",
+      "AND",
+      "DUP4",
+      "DUP1",
+      "ADD",
+      "OR",
+      "DUP6",
+      "SSTORE",
+      "PUSH2 0x2407",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 9223,
+    "asmcode": [
+      "JUMPDEST",
+      "POP",
+      "SWAP1",
+      "POP",
+      "PUSH2 0x2414",
+      "SWAP2",
+      "SWAP1",
+      "PUSH2 0x2418",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 9177,
+    "asmcode": [
+      "JUMPDEST",
+      "DUP3",
+      "DUP1",
+      "ADD",
+      "PUSH1 0x1",
+      "ADD",
+      "DUP6",
+      "SSTORE",
+      "DUP3",
+      "ISZERO",
+      "PUSH2 0x2407",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 9192,
+    "asmcode": [
+      "SWAP2",
+      "DUP3",
+      "ADD"
+    ]
+  },
+  {
+    "id": 9195,
+    "asmcode": [
+      "JUMPDEST",
+      "DUP3",
+      "DUP2",
+      "GT",
+      "ISZERO",
+      "PUSH2 0x2406",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 9204,
+    "asmcode": [
+      "DUP3",
+      "MLOAD",
+      "DUP3",
+      "SSTORE",
+      "SWAP2",
+      "PUSH1 0x20",
+      "ADD",
+      "SWAP2",
+      "SWAP1",
+      "PUSH1 0x1",
+      "ADD",
+      "SWAP1",
+      "PUSH2 0x23eb",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 9240,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH2 0x243a",
+      "SWAP2",
+      "SWAP1"
+    ]
+  },
+  {
+    "id": 9246,
+    "asmcode": [
+      "JUMPDEST",
+      "DUP1",
+      "DUP3",
+      "GT",
+      "ISZERO",
+      "PUSH2 0x2436",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 9255,
+    "asmcode": [
+      "PUSH1 0x0",
+      "DUP2",
+      "PUSH1 0x0",
+      "SWAP1",
+      "SSTORE",
+      "POP",
+      "PUSH1 0x1",
+      "ADD",
+      "PUSH2 0x241e",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 9222,
+    "asmcode": [
+      "JUMPDEST"
+    ]
+  },
+  {
+    "id": 9270,
+    "asmcode": [
+      "JUMPDEST",
+      "POP",
+      "SWAP1",
+      "JUMP"
+    ]
+  }
+]

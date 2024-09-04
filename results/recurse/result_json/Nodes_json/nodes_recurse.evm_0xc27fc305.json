@@ -1,0 +1,47 @@
+[
+  {
+    "id": 143,
+    "asmcode": [
+      "JUMPDEST",
+      "CALLVALUE",
+      "DUP1",
+      "ISZERO",
+      "PUSH1 0x9a",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 150,
+    "asmcode": [
+      "PUSH1 0x0",
+      "DUP1",
+      "REVERT"
+    ]
+  },
+  {
+    "id": 154,
+    "asmcode": [
+      "JUMPDEST",
+      "POP",
+      "PUSH1 0xa1",
+      "PUSH1 0xb3",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 179,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0xb9",
+      "PUSH1 0xb1",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 177,
+    "asmcode": [
+      "JUMPDEST",
+      "JUMP"
+    ]
+  }
+]

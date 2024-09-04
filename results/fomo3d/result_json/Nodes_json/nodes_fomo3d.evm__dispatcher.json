@@ -1,0 +1,418 @@
+[
+  {
+    "id": 0,
+    "asmcode": [
+      "PUSH1 0x80",
+      "PUSH1 0x40",
+      "MSTORE",
+      "PUSH1 0x4",
+      "CALLDATASIZE",
+      "LT",
+      "PUSH2 0x169",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 13,
+    "asmcode": [
+      "PUSH1 0x0",
+      "CALLDATALOAD",
+      "PUSH29 0x100000000000000000000000000000000000000000000000000000000",
+      "SWAP1",
+      "DIV",
+      "PUSH4 0xffffffff",
+      "AND",
+      "DUP1",
+      "PUSH3 0x65318b",
+      "EQ",
+      "PUSH2 0x177",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 64,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x6fdde03",
+      "EQ",
+      "PUSH2 0x1ce",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 75,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x10d0ffdd",
+      "EQ",
+      "PUSH2 0x25e",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 86,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x18160ddd",
+      "EQ",
+      "PUSH2 0x29f",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 97,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x22609373",
+      "EQ",
+      "PUSH2 0x2ca",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 108,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x27defa1f",
+      "EQ",
+      "PUSH2 0x30b",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 119,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x313ce567",
+      "EQ",
+      "PUSH2 0x33a",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 130,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x392efb52",
+      "EQ",
+      "PUSH2 0x36b",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 141,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x3ccfd60b",
+      "EQ",
+      "PUSH2 0x3b4",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 152,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x4b750334",
+      "EQ",
+      "PUSH2 0x3cb",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 163,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x56d399e8",
+      "EQ",
+      "PUSH2 0x3f6",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 174,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x688abbf7",
+      "EQ",
+      "PUSH2 0x421",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 185,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x6b2f4632",
+      "EQ",
+      "PUSH2 0x464",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 196,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x70a08231",
+      "EQ",
+      "PUSH2 0x48f",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 207,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x8328b610",
+      "EQ",
+      "PUSH2 0x4e6",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 218,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x8620410b",
+      "EQ",
+      "PUSH2 0x513",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 229,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x89135ae9",
+      "EQ",
+      "PUSH2 0x53e",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 240,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x8fea64bd",
+      "EQ",
+      "PUSH2 0x57b",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 251,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x949e8acd",
+      "EQ",
+      "PUSH2 0x592",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 262,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0x95d89b41",
+      "EQ",
+      "PUSH2 0x5bd",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 273,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0xa8e04f34",
+      "EQ",
+      "PUSH2 0x64d",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 284,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0xa9059cbb",
+      "EQ",
+      "PUSH2 0x664",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 295,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0xb84c8246",
+      "EQ",
+      "PUSH2 0x6c9",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 306,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0xc47f0027",
+      "EQ",
+      "PUSH2 0x732",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 317,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0xe4849b32",
+      "EQ",
+      "PUSH2 0x79b",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 328,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0xe9fad8ee",
+      "EQ",
+      "PUSH2 0x7c8",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 339,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0xf088d547",
+      "EQ",
+      "PUSH2 0x7df",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 350,
+    "asmcode": [
+      "DUP1",
+      "PUSH4 0xfdb5a03e",
+      "EQ",
+      "PUSH2 0x829",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 361,
+    "asmcode": []
+  },
+  {
+    "id": 375,
+    "asmcode": []
+  },
+  {
+    "id": 462,
+    "asmcode": []
+  },
+  {
+    "id": 606,
+    "asmcode": []
+  },
+  {
+    "id": 671,
+    "asmcode": []
+  },
+  {
+    "id": 714,
+    "asmcode": []
+  },
+  {
+    "id": 779,
+    "asmcode": []
+  },
+  {
+    "id": 826,
+    "asmcode": []
+  },
+  {
+    "id": 875,
+    "asmcode": []
+  },
+  {
+    "id": 948,
+    "asmcode": []
+  },
+  {
+    "id": 971,
+    "asmcode": []
+  },
+  {
+    "id": 1014,
+    "asmcode": []
+  },
+  {
+    "id": 1057,
+    "asmcode": []
+  },
+  {
+    "id": 1124,
+    "asmcode": []
+  },
+  {
+    "id": 1167,
+    "asmcode": []
+  },
+  {
+    "id": 1254,
+    "asmcode": []
+  },
+  {
+    "id": 1299,
+    "asmcode": []
+  },
+  {
+    "id": 1342,
+    "asmcode": []
+  },
+  {
+    "id": 1403,
+    "asmcode": []
+  },
+  {
+    "id": 1426,
+    "asmcode": []
+  },
+  {
+    "id": 1469,
+    "asmcode": []
+  },
+  {
+    "id": 1613,
+    "asmcode": []
+  },
+  {
+    "id": 1636,
+    "asmcode": []
+  },
+  {
+    "id": 1737,
+    "asmcode": []
+  },
+  {
+    "id": 1842,
+    "asmcode": []
+  },
+  {
+    "id": 1947,
+    "asmcode": []
+  },
+  {
+    "id": 1992,
+    "asmcode": []
+  },
+  {
+    "id": 2015,
+    "asmcode": []
+  },
+  {
+    "id": 2089,
+    "asmcode": []
+  }
+]

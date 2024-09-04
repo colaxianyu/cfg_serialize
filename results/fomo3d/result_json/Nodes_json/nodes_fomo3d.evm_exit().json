@@ -1,0 +1,289 @@
+[
+  {
+    "id": 1992,
+    "asmcode": [
+      "JUMPDEST",
+      "CALLVALUE",
+      "DUP1",
+      "ISZERO",
+      "PUSH2 0x7d4",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 2000,
+    "asmcode": [
+      "PUSH1 0x0",
+      "DUP1",
+      "REVERT"
+    ]
+  },
+  {
+    "id": 2004,
+    "asmcode": [
+      "JUMPDEST",
+      "POP",
+      "PUSH2 0x7dd",
+      "PUSH2 0x1fd6",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 8150,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0x0",
+      "DUP1",
+      "CALLER",
+      "SWAP2",
+      "POP",
+      "PUSH1 0x4",
+      "PUSH1 0x0",
+      "DUP4",
+      "PUSH20 0xffffffffffffffffffffffffffffffffffffffff",
+      "AND",
+      "PUSH20 0xffffffffffffffffffffffffffffffffffffffff",
+      "AND",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "SWAP1",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "PUSH1 0x0",
+      "SHA3",
+      "SLOAD",
+      "SWAP1",
+      "POP",
+      "PUSH1 0x0",
+      "DUP2",
+      "GT",
+      "ISZERO",
+      "PUSH2 0x2031",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 8232,
+    "asmcode": [
+      "PUSH2 0x2030",
+      "DUP2",
+      "PUSH2 0x1da8",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 7592,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0x0",
+      "DUP1",
+      "PUSH1 0x0",
+      "DUP1",
+      "PUSH1 0x0",
+      "DUP1",
+      "PUSH1 0x0",
+      "PUSH2 0x1dbb",
+      "PUSH2 0x17d4",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 8241,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH2 0x2039",
+      "PUSH2 0x1343",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 6100,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0x0",
+      "DUP1",
+      "CALLER",
+      "SWAP1",
+      "POP",
+      "PUSH2 0x17e3",
+      "DUP2",
+      "PUSH2 0x15d6",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 4931,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0x0",
+      "DUP1",
+      "PUSH1 0x0",
+      "PUSH2 0x1352",
+      "PUSH1 0x1",
+      "PUSH2 0x154b",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 5451,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0x0",
+      "DUP1",
+      "CALLER",
+      "SWAP1",
+      "POP",
+      "DUP3",
+      "PUSH2 0x1564",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 5463,
+    "asmcode": [
+      "PUSH2 0x155f",
+      "DUP2",
+      "PUSH2 0x1140",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 5590,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0x0",
+      "PUSH1 0x4",
+      "PUSH1 0x0",
+      "DUP4",
+      "PUSH20 0xffffffffffffffffffffffffffffffffffffffff",
+      "AND",
+      "PUSH20 0xffffffffffffffffffffffffffffffffffffffff",
+      "AND",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "SWAP1",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "PUSH1 0x0",
+      "SHA3",
+      "SLOAD",
+      "SWAP1",
+      "POP",
+      "SWAP2",
+      "SWAP1",
+      "POP",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 4416,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0x0",
+      "PUSH9 0x10000000000000000",
+      "PUSH1 0x6",
+      "PUSH1 0x0",
+      "DUP5",
+      "PUSH20 0xffffffffffffffffffffffffffffffffffffffff",
+      "AND",
+      "PUSH20 0xffffffffffffffffffffffffffffffffffffffff",
+      "AND",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "SWAP1",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "PUSH1 0x0",
+      "SHA3",
+      "SLOAD",
+      "PUSH1 0x4",
+      "PUSH1 0x0",
+      "DUP6",
+      "PUSH20 0xffffffffffffffffffffffffffffffffffffffff",
+      "AND",
+      "PUSH20 0xffffffffffffffffffffffffffffffffffffffff",
+      "AND",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "SWAP1",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "PUSH1 0x0",
+      "SHA3",
+      "SLOAD",
+      "PUSH1 0x9",
+      "SLOAD",
+      "MUL",
+      "SUB",
+      "DUP2",
+      "ISZERO",
+      "ISZERO",
+      "PUSH2 0x11da",
+      "JUMPI"
+    ]
+  },
+  {
+    "id": 4569,
+    "asmcode": [
+      "INVALID"
+    ]
+  },
+  {
+    "id": 4570,
+    "asmcode": [
+      "JUMPDEST",
+      "DIV",
+      "SWAP1",
+      "POP",
+      "SWAP2",
+      "SWAP1",
+      "POP",
+      "JUMP"
+    ]
+  },
+  {
+    "id": 5476,
+    "asmcode": [
+      "JUMPDEST",
+      "PUSH1 0x5",
+      "PUSH1 0x0",
+      "DUP3",
+      "PUSH20 0xffffffffffffffffffffffffffffffffffffffff",
+      "AND",
+      "PUSH20 0xffffffffffffffffffffffffffffffffffffffff",
+      "AND",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "SWAP1",
+      "DUP2",
+      "MSTORE",
+      "PUSH1 0x20",
+      "ADD",
+      "PUSH1 0x0",
+      "SHA3",
+      "SLOAD",
+      "PUSH2 0x15ad",
+      "DUP3",
+      "PUSH2 0x1140",
+      "JUMP"
+    ]
+  }
+]
