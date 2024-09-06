@@ -24,3 +24,33 @@ class CFGFomat:
 
     def to_dict(self) -> dict:
         return {'cfg': {'nodes': [node.to_dict() for node in self.nodes_], 'edges': [edge.to_list() for edge in self.edges_]}}
+    
+class CFG:
+    def __init__(self, node_list, edge_list) -> None:
+        self.cfg_format_ = CFGFomat(node_list, edge_list)
+        self.forward_edges_ = {}
+        self.backward_edges_ = {}
+
+        self.__set_forward_edges()
+        self.__set_backward_edges()
+        self.root_ = self.__find_root()
+
+    def __is_empty(self) -> bool:
+        return not self.cfg_format_.nodes_ and not self.cfg_format_.edges_        
+
+    def __find_root(self) -> int:
+        for node in self.cfg_format_.nodes_:
+            if node.id_ not in self.forward_edges_ and node.id_ in self.backward_edges_:
+                return node.id_
+        return None
+
+    def __set_forward_edges(self) -> dict:
+        for edge in self.cfg_format_.edges_:
+            self.forward_edges_.setdefault(edge.to_node_id_, []).append(edge.from_node_id_)
+
+    def __set_backward_edges(self) -> dict:
+        for edge in self.cfg_format_.edges_:
+            self.backward_edges_.setdefault(edge.from_node_id_, []).append(edge.to_node_id_)
+
+    def to_dict(self) -> dict:
+        return self.cfg_format.to_dict()
