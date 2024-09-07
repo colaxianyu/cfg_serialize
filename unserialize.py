@@ -1,7 +1,7 @@
-from serialize_tool.cfg_format import CFGFomat
+from serialize_tool.cfg_format import CFGFormat
 from serialize_tool.cfg_unserialize import CFGUnserialize
 
-def unserialize_cfgs_ex(*file_paths: str) -> CFGFomat:
+def unserialize_cfgs_ex(*file_paths: str) -> CFGFormat:
     unserialize = CFGUnserialize();
     return unserialize.get_cfg(*file_paths)
 

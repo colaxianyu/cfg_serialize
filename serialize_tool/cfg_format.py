@@ -18,7 +18,7 @@ class Edge:
         return [self.from_node_id_, self.to_node_id_]
 
 @dataclass
-class CFGFomat:
+class CFGFormat:
     nodes_: List[Node] = field(default_factory = list)
     edges_: List[Edge] = field(default_factory = list)
 
@@ -27,30 +27,37 @@ class CFGFomat:
     
 class CFG:
     def __init__(self, node_list, edge_list) -> None:
-        self.cfg_format_ = CFGFomat(node_list, edge_list)
-        self.forward_edges_ = {}
-        self.backward_edges_ = {}
+        self.cfg_format_ = CFGFormat(node_list, edge_list)
+        self.forward_edges_ = dict()
+        self.backward_edges_ = dict()
+        self.isolated_nodes_ = set()
 
         self.__set_forward_edges()
         self.__set_backward_edges()
-        self.root_ = self.__find_root()
+        self.__set_isolated_nodes()
+        self.root_id_ = self.__find_root_id()
 
     def __is_empty(self) -> bool:
         return not self.cfg_format_.nodes_ and not self.cfg_format_.edges_        
 
-    def __find_root(self) -> int:
+    def __find_root_id(self) -> int:
         for node in self.cfg_format_.nodes_:
             if node.id_ not in self.forward_edges_ and node.id_ in self.backward_edges_:
                 return node.id_
         return None
 
-    def __set_forward_edges(self) -> dict:
+    def __set_forward_edges(self):
         for edge in self.cfg_format_.edges_:
             self.forward_edges_.setdefault(edge.to_node_id_, []).append(edge.from_node_id_)
 
-    def __set_backward_edges(self) -> dict:
+    def __set_backward_edges(self):
         for edge in self.cfg_format_.edges_:
             self.backward_edges_.setdefault(edge.from_node_id_, []).append(edge.to_node_id_)
+    
+    def __set_isolated_nodes(self):
+        all_nodes = set(node.id_ for node in self.cfg_format_.nodes_)
+        connected_nodes = set(self.forward_edges_.keys()) | set(self.backward_edges_.keys())
+        self.isolated_nodes_ = all_nodes - connected_nodes
 
     def to_dict(self) -> dict:
         return self.cfg_format.to_dict()
