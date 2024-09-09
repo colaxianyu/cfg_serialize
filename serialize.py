@@ -16,10 +16,10 @@ def main():
 
     serialize_cfgs_ex(input_dir, output_dir, file_format, delete_dot, is_serialize_graph2vec)
 
-input = "D:\\MyFile\\Download\\evm_cfg_builder\\test1"
-output = "D:\\MyFile\\Download\\evm_cfg_builder\\results"
+# input = "D:\\MyFile\\Download\\evm_cfg_builder\\test1"
+# output = "D:\\MyFile\\Download\\evm_cfg_builder\\results"
 
-serialize_cfgs_ex(input, output)
+# serialize_cfgs_ex(input, output)
 
 
 # if __name__ == "__main__":

@@ -4,7 +4,7 @@ from serialize_tool.cfg_format import CFG, Node, Edge
 
 class CFGUnserialize:
     def __init__(self) -> None:
-        self.cfg_ = None
+        self.cfg_ : CFG = None
 
     def __unload_cfg(self) -> None:
         if self.cfg_ is None or not self.cfg_.__is_empty():
@@ -22,8 +22,6 @@ class CFGUnserialize:
 
                 nodes = [Node(id_=node['id'], asm_code_=node['asmcode']) for node in data['cfg']['nodes']]
                 edges = [Edge(from_node_id_=edge[0], to_node_id_=edge[1]) for edge in data['cfg']['edges']]
-                # self.cfg_.nodes_ = [Node(id_=node['id'], asm_code_=node['asmcode']) for node in data['cfg']['nodes']]
-                # self.cfg_.edges_ = [Edge(from_node_id_=edge[0], to_node_id_=edge[1]) for edge in data['cfg']['edges']]
                 self.cfg_ = CFG(nodes, edges)
         except json.JSONDecodeError as e:
             print(f"Error decoding JSON from file {file_path}: {str(e)}")

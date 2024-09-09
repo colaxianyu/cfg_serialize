@@ -1,26 +1,22 @@
 from dataclasses import dataclass, field
 from typing import List
+from serialize_tool.graph_object import GraphObject, Node, Edge
 
 @dataclass
-class Node:
-    id_: int
-    asm_code_: List[str] = field(default_factory = list)
-
+class Cnode(Node):
     def to_dict(self) -> dict:
         return {'id': self.id_, 'asmcode': self.asm_code_}
 
 @dataclass
-class Edge:
-    from_node_id_: int
-    to_node_id_: int
-
+class Cedge(Edge):
     def to_list(self) -> List[int]:
         return [self.from_node_id_, self.to_node_id_]
 
 @dataclass
-class CFGFormat:
-    nodes_: List[Node] = field(default_factory = list)
-    edges_: List[Edge] = field(default_factory = list)
+class CFGFormat(GraphObject[Cnode, Cedge]):
+    def __post_init__(self):
+        self.nodes_ = [Cnode(n.id_, n.asm_code_) if isinstance(n, Node) else n for n in self.nodes_]
+        self.edges_ = [Cedge(e.from_node_id_, e.to_node_id_) if isinstance(e, Edge) else e for e in self.edges_]
 
     def to_dict(self) -> dict:
         return {'cfg': {'nodes': [node.to_dict() for node in self.nodes_], 'edges': [edge.to_list() for edge in self.edges_]}}

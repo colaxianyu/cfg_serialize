@@ -2,16 +2,10 @@ import pydot
 import json
 import pickle
 import os
-# import sys
 import networkx as nx
 from typing import List
 from cfg_format import CFG, Node, Edge
 from third_party.evm_cfg_builder.build import process_evm_file
-
-# current_dir = os.path.dirname(os.path.abspath(__file__))
-# project_root = os.path.abspath(os.path.join(current_dir, '..'))
-# sys.path.append(project_root)
-# from third_party.evm_cfg_builder.build import process_evm_file
 
 
 
