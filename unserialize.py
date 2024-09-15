@@ -1,4 +1,4 @@
-from serialize_tool.cfg_format import CFG
+from serialize_tool.cfg import CFG
 from serialize_tool.cfg_unserialize import CFGUnserialize
 
 def unserialize_cfgs_ex(*file_paths: str) -> CFG:

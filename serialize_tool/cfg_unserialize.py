@@ -1,6 +1,6 @@
 import os
 import json
-from serialize_tool.cfg_format import CFG, Node, Edge
+from serialize_tool.cfg import CFG, Cnode, Cedge
 
 class CFGUnserialize:
     def __init__(self) -> None:
@@ -20,8 +20,8 @@ class CFGUnserialize:
            with open(file_path, 'r') as f:
                 data = json.load(f)
 
-                nodes = [Node(id_=node['id'], asm_code_=node['asmcode']) for node in data['cfg']['nodes']]
-                edges = [Edge(from_node_id_=edge[0], to_node_id_=edge[1]) for edge in data['cfg']['edges']]
+                nodes = [Cnode(id_=node['id'], asm_code_=node['asmcode']) for node in data['cfg']['nodes']]
+                edges = [Cedge(from_node_id_=edge[0], to_node_id_=edge[1]) for edge in data['cfg']['edges']]
                 self.cfg_ = CFG(nodes, edges)
         except json.JSONDecodeError as e:
             print(f"Error decoding JSON from file {file_path}: {str(e)}")
@@ -36,12 +36,12 @@ class CFGUnserialize:
         try:
             with open(nodes_file, 'r') as f:
                 nodes_data = json.load(f)
-                nodes = [Node(id_=node['id'], asm_code_=node['asmcode']) for node in nodes_data]
+                nodes = [Cnode(id_=node['id'], asm_code_=node['asmcode']) for node in nodes_data]
                 # self.cfg_.nodes_ = [Node(id_=node['id'], asm_code_=node['asmcode']) for node in nodes_data]
             
             with open(edges_file, 'r') as f:
                 edges_data = json.load(f)
-                edges = [Edge(from_node_id_=edge[0], to_node_id_=edge[1]) for edge in edges_data['edges']]
+                edges = [Cedge(from_node_id_=edge[0], to_node_id_=edge[1]) for edge in edges_data['edges']]
                 # self.cfg_.edges_ = [Edge(from_node_id_=edge[0], to_node_id_=edge[1]) for edge in edges_data['edges']]
             self.cfg_ = CFG(nodes, edges)
         except json.JSONDecodeError as e:

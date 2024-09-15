@@ -4,7 +4,7 @@ import pickle
 import os
 import networkx as nx
 from typing import List
-from cfg_format import CFG, Node, Edge
+from serialize_tool.cfg import CFG, Cnode, Cedge
 from third_party.evm_cfg_builder.build import process_evm_file
 
 
@@ -37,10 +37,10 @@ class CFGSerialization:
             asm_code_raw = attrs.get('label', '').strip('"')
             asm_code_list = asm_code_raw.split('\n')
             asm_code = [line.split(':', 1)[1].strip() for line in asm_code_list if ':' in line]
-            nodes.append(Node(id_ = int(node_id), asm_code_ = asm_code))
+            nodes.append(Cnode(id = int(node_id), asm_code = asm_code))
 
         for from_node, to_node in graph.edges():
-            edges.append(Edge(from_node_id_ = int(from_node), to_node_id_ = int(to_node)))
+            edges.append(Cedge(from_node_id = int(from_node), to_node_id = int(to_node)))
 
         self.cfg_ = CFG(nodes, edges)
 
@@ -98,6 +98,6 @@ class CFGSerialization:
                 import shutil
                 shutil.rmtree(dot_dir)
 
-# dir = "D:/MyFile/Download/evm_cfg_builder/test1"
-# c = CFGSerialization()
-# c.serialize_cfgs(dir, is_serialize_graph2vec=True)
+dir = "D:/MyFile/Download/evm_cfg_builder/test1"
+c = CFGSerialization()
+c.serialize_cfgs(dir, is_serialize_graph2vec=True)
